@@ -1,13 +1,17 @@
 'use strict'
 
 function getMaxSubSum(arr) {
-    let value = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 0){
-            value += arr[i];
-        }
+    let maxSum = 0;
+    let sum = 0;
+    for (let i of arr) {
+        sum += i;
+        if (sum < 0) {
+            sum = 0;
+        } else if (sum > maxSum){
+            maxSum = sum;
+        };
     };
-    return value;
+    return maxSum;
 };
 console.log(getMaxSubSum([-1, 2, 3, -9])) //= 5 (сумма выделенных)
 console.log(getMaxSubSum([2, -1, 2, 3, -9])) //= 6
