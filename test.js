@@ -4,7 +4,7 @@ function Calculator(){
     this['+'] = (a, b) => a + b;
     this['-'] = (a, b) => a - b; 
     this.calculate = (str) => {
-        str.split(' ')[1] == 
+        str.split(' ')[1] == 1
     };
 };
 
